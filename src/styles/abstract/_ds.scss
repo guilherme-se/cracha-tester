@@ -1,0 +1,99 @@
+// fonts cdn
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+// primary color
+$color-primary-800: #410099;
+$color-primary-600: #5619B4;
+$color-primary-400: #6420CD;
+$color-primary-100: #F1EDFE;
+$color-primary-50: #F7F6FE;
+
+// neutral color
+$color-neutral-900: #0E0E10;
+$color-neutral-600: #56677D;
+$color-neutral-400: #7A899F;
+$color-neutral-200: #CDD6E0;
+$color-neutral-50: #F2F3F5;
+$color-neutral-0: #FFFFFF;
+
+// error color
+$color-error-900: #E13A33; 
+$color-error-50: #FCEAED;
+
+// fonts setting
+$font-h-m: 700 24px/32px "Sora", sans-serif;
+$font-text: 400 16px/24px "Sora", sans-serif;
+$font-text-b: 600 16px/24px "Sora", sans-serif;
+$font-text-700: 700 16px/24px "Sora", sans-serif;
+$font-text-p: 400 14px/24px "Sora", sans-serif;
+$font-text-p-b: 600 14px/24px "Sora", sans-serif;
+$font-text-sm: 400 12px/16px "Sora", sans-serif;
+$font-text-sm-b: 600 12px/16px "Sora", sans-serif;
+
+$font-brand-24: 700 24px/32px "Montserrat", sans-serif;
+$font-brand-16-b: 600 16px/24px "Montserrat", sans-serif;
+$font-brand-16: 400 16px/24px "Montserrat", sans-serif;
+$font-brand-14-b: 600 14px/24px "Montserrat", sans-serif;
+$font-brand-14: 400 14px/24px "Montserrat", sans-serif;
+
+$content-width: 800px;
+
+// tamanhos de tela
+// Small tablets and large smartphones (landscape view)
+$screen-sm: 576px;
+
+// Small tablets (portrait view)
+$screen-md: 768px;
+
+// Tablets and small desktops
+$screen-lg: 992px;
+
+// Large tablets and desktops
+$screen-xl: 1200px;
+
+// Small devices
+@mixin sm {
+    @media (max-width: $screen-sm) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (max-width: $screen-md) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (max-width: $screen-lg) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (max-width: $screen-xl) {
+        @content;
+    }
+ }
+
+// ------------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: $font-text;
+    color: $color-neutral-600;
+    text-decoration: none;
+    outline: none;
+}
+
+.inner-container {
+    width: 100%;
+    max-width: $content-width;
+    margin: 0 auto;
+}
