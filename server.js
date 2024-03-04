@@ -9,9 +9,6 @@ const PORT = 3000;
 // Middleware para fazer o parse do corpo das requisições
 app.use(bodyParser.json());
 
-// Servir arquivos estáticos da pasta 'public'
-app.use(express.static(path.join(__dirname, 'public','index.html')));   
-
 // Servir o arquivo index.html na rota raiz
 app.get('/', (req, res) => {
     const indexPath = path.join(__dirname, 'index.html');
