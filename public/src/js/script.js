@@ -114,6 +114,13 @@ function updateProgressBar(width) {
             preserveDrawingBuffer: true
         }).then(function (canvas) {
             var name = nome.toLowerCase().replace(" ", "-") + '-cracha';
+            let a = document.createElement('a');
+            a.href = canvas.toDataURL("image/png",1.0);
+            a.download = name + '.png';
+            a.style.display = 'none';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
     
             // Convertendo o canvas em uma imagem base64
             var imageData = canvas.toDataURL("image/png");
