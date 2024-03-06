@@ -16,7 +16,7 @@ app.post('/salvar-imagem', (req, res) => {
     const imageData = req.body.imagem;
     const base64Data = imageData.replace(/^data:image\/png;base64,/, '');
     const buffer = Buffer.from(base64Data, 'base64'); // Converte a string base64 para um buffer binário
-    const nomeArquivo = req.body.nome || 'imagem_salva.png';
+    const nomeArquivo = (req.body.nome || 'imagem_salva') + '.jpeg'; // Adiciona a extensão .jpeg ao nome do arquivo
     const caminhoArquivo = path.join(__dirname, 'imagens', nomeArquivo);
 
     fs.writeFile(caminhoArquivo, buffer, (err) => { // Salva o buffer como um arquivo

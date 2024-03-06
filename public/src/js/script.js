@@ -305,8 +305,3 @@ function alertCaracter(nome)
 
 
 
-
-
-
-
-
