@@ -9,8 +9,12 @@ const PORT = 3000;
 app.use(bodyParser.json({ limit: '100mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '100mb' }));
 
-// Servindo arquivos estáticos
-app.use(express.static('public'));
+// Antes: servindo arquivos estáticos da pasta 'public'
+// app.use(express.static('public'));
+
+// Depois: servindo arquivos estáticos do diretório raiz
+app.use(express.static(path.join(__dirname)));
+
 
 app.post('/salvar-imagem', (req, res) => {
     const imageData = req.body.imagem;
